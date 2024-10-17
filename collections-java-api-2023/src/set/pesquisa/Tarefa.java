@@ -1,15 +1,13 @@
 package set.pesquisa;
 
-import java.util.Objects;
-
 public class Tarefa {
 	
 	private String descricao;
 	private boolean concluida;
 	
-	public Tarefa(String descricao, boolean concluida) {
+	public Tarefa(String descricao) {
 		this.descricao = descricao;
-		this.concluida = concluida;
+		this.concluida = false;
 	}
 
 	public String getDescricao() {
@@ -34,21 +32,5 @@ public class Tarefa {
 		return "{" + descricao + "," + concluida + "}";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(concluida, descricao);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Tarefa other = (Tarefa) obj;
-		return concluida == other.concluida && Objects.equals(descricao, other.descricao);
-	}
 	
 }

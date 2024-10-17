@@ -52,7 +52,7 @@ public class ListaTarefas {
 	}
 	
 	public void adicionarTarefa(String descricao) {
-		tarefaSet.add(new Tarefa(descricao, false));
+		tarefaSet.add(new Tarefa(descricao));
 	}
 	
 	public void removerTarefa(String descricao) {
